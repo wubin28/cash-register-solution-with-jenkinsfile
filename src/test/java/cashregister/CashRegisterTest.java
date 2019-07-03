@@ -2,6 +2,8 @@ package cashregister;
 
 import org.junit.Test;
 
+import static org.mockito.BDDMockito.given;
+import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.*;
 
 public class CashRegisterTest {
@@ -44,5 +46,18 @@ public class CashRegisterTest {
         cashRegister.process(purchase);
 
         verify(printer, times(1)).print("purchase as string");
+    }
+
+    @Test
+    public void processShouldPrintThePurchaseUsingMockitoBdd() throws Exception {
+        Purchase purchase = mock(Purchase.class);
+        given(purchase.asString()).willReturn("purchase as string");
+        Printer printer = mock(Printer.class);
+
+        CashRegister cashRegister = new CashRegister(printer);
+
+        cashRegister.process(purchase);
+
+        then(printer).should(times(1)).print("purchase as string");
     }
 }
