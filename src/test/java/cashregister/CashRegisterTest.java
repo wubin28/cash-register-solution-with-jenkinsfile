@@ -10,7 +10,7 @@ public class CashRegisterTest {
     @Test
     public void processShouldPrintTheRealPurchase() throws Exception {
         Item items[] = new Item[] {
-                new Item("Item 1", 50),
+                new Item("Item 10", 50),
                 new Item("Item 2", 60)
         };
         Purchase purchase = new Purchase(items);
