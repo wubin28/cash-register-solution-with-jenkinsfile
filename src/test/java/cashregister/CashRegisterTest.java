@@ -45,7 +45,7 @@ public class CashRegisterTest {
 
         cashRegister.process(purchase);
 
-        verify(printer, times(1)).print("purchase as string");
+        verify(printer, times(10)).print("purchase as string");
     }
 
     @Test
