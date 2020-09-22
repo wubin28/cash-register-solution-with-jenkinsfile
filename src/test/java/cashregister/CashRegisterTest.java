@@ -16,6 +16,8 @@ public class CashRegisterTest {
         Purchase purchase = new Purchase(items);
         MockPrinter printer = new MockPrinter();
 
+        aaa();
+
         CashRegister cashRegister = new CashRegister(printer);
 
         cashRegister.process(purchase);
@@ -45,7 +47,7 @@ public class CashRegisterTest {
 
         cashRegister.process(purchase);
 
-        verify(printer, times(10)).print("purchase as string");
+        verify(printer, times(1)).print("purchase as string");
     }
 
     @Test
