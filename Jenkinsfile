@@ -17,6 +17,7 @@ pipeline {
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                echo 'hello from the web hook'
             }
 
             post {
