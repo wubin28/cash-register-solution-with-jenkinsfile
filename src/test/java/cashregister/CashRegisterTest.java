@@ -26,9 +26,13 @@ public class CashRegisterTest {
 
 
 
-
-
         
+
+
+
+
+
+
         cashRegister.process(purchase);
 
         printer.verifyThatPrintWasCalledWith(purchase.asString());
