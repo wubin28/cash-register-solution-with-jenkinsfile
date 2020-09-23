@@ -18,6 +18,8 @@ public class CashRegisterTest {
 
         CashRegister cashRegister = new CashRegister(printer);
 
+
+        
         cashRegister.process(purchase);
 
         printer.verifyThatPrintWasCalledWith(purchase.asString());
