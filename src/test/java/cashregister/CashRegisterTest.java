@@ -15,24 +15,9 @@ public class CashRegisterTest {
         };
         Purchase purchase = new Purchase(items);
         MockPrinter printer = new MockPrinter();
-
         CashRegister cashRegister = new CashRegister(printer);
 
-
-
-
-
-
-
-
-
-
         
-
-
-
-
-
 
         cashRegister.process(purchase);
 
