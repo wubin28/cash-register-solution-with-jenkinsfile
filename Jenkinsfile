@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    triggers {
-        cron('H H(9-16)/2 * * 1-5')
-    }
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
@@ -12,7 +9,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'hello from the web hook'
                  // Get some code from a GitHub repository
                 git 'https://gitee.com/wubin28/cash-register-solution.git'
 

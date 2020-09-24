@@ -59,6 +59,6 @@ public class CashRegisterTest {
 
         cashRegister.process(purchase);
 
-        then(printer).should(times(2)).print("purchase as string");
+        then(printer).should(times(1)).print("purchase as string");
     }
 }
