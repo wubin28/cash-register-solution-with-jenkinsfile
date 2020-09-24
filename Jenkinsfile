@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                  // Get some code from a GitHub repository
-                git 'https://gitee.com/wubin28/cash-register-solution.git'
+                git 'https://github.com/wubin28/cash-register-solution-with-jenkinsfile.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
