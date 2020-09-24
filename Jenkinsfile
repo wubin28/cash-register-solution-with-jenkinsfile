@@ -12,7 +12,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
+                echo 'hello from the web hook'
+                 // Get some code from a GitHub repository
                 git 'https://gitee.com/wubin28/cash-register-solution.git'
 
                 // Run Maven on a Unix agent.
@@ -20,8 +21,7 @@ pipeline {
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
-                echo 'hello from the web hook'
-            }
+           }
 
             post {
                 // If Maven was able to run the tests, even if some of the test
